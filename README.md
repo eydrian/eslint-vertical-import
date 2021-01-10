@@ -69,12 +69,11 @@ Feel free to optimize
 
 
 
-## One to support this me?
+## Want to support me?
 
 <a href="https://www.buymeacoffee.com/eydrian" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
-Please consider supporting me if find this useful:
-https://www.buymeacoffee.com/eydrian
+Please consider supporting me if you find this useful.
 
 ### tslint rule
 the corresponding tslint rule can be found here: https://github.com/eydrian/tslint-vertical-import
