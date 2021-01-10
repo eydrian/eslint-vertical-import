@@ -1,13 +1,13 @@
 {
-  "name": "eslint-vertical-import",
+  "name": "eslint-plugin-eslint-vertical-import",
   "version": "1.0.0",
   "description": "Custom eslint rule to enforces vertical alignment of imports",
   "main": "dist/index.js",
   "scripts": {
     "prepublish": " npm run build && npm run test",
     "start": "mkdir -p dist && npm run build",
-    "build": "tsc src/*.ts --outDir dist/",
-    "test": "eslint --test test"
+    "build": "tsc --project tsconfig.json",
+    "test": "npx jest"
   },
   "repository": {
     "type": "git",

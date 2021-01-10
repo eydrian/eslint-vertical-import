@@ -39,10 +39,38 @@ Install the package with
 Then add the following to your `.eslintrc.js`:
 
 ```
-  "rulesDirectory": [
+  "plugins": [
+    "@typescript-eslint/eslint-plugin",
     "eslint-vertical-import"
   ],
   "rules": {
-    "vertical-import": true
+    "eslint-vertical-import/vertical-import": 2,
   }
 ```
+
+### known issues
+- only works with indent two
+- only works with dangling comma enabled
+- doesn't work with prettier
+- doesn't work for combined import e.g.
+```typescript
+import lib, { StatementOne, StatementTwo } from 'lib';
+// must be written as:
+import lib from 'lib';
+import {
+  StatementOne,
+  StatementTwo,
+} from 'lib';
+```
+
+which is ugly...
+
+Feel free to optimize
+
+
+
+Please consider supporting me if find this useful:
+https://www.buymeacoffee.com/eydrian
+
+### tslint rule
+the corresponding tslint rule can be found here: https://github.com/eydrian/tslint-vertical-import

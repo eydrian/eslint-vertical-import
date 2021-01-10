@@ -1,14 +1,12 @@
 import {
   TSESTree,
   ESLintUtils,
+  TSESLint,
 } from '@typescript-eslint/experimental-utils';
-import {
-  RuleContext,
-} from '@typescript-eslint/experimental-utils/dist/ts-eslint';
 
 const version = require('../package.json').version;
 const createRule = ESLintUtils.RuleCreator(
-  () => `https://github.com/eydrian/tslint-vertical-import/blob/v${ version }/README.md`,
+  () => `https://github.com/eydrian/eslint-vertical-import/blob/v${ version }/README.md`,
 );
 
 export type MessageIds = 'verticalImport';
@@ -17,7 +15,7 @@ export const RULE_NAME = 'vertical-import';
 type Options = [];
 
 function handleImports(
-  context: Readonly<RuleContext<'verticalImport', []>>,
+  context: Readonly<TSESLint.RuleContext<'verticalImport', []>>,
 ) {
   const sourceCode = context.getSourceCode();
   return (node: TSESTree.ImportDeclaration) => {

@@ -1,7 +1,6 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
     "outDir": "./dist",
     "forceConsistentCasingInFileNames": true,
     "sourceMap": true,
@@ -16,15 +15,17 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "strict": true,
-    "target": "es2018",
+    "target": "es2017",
+    "skipLibCheck": true,
     "typeRoots": [
       "node_modules/@types"
     ],
     "lib": [
-      "es2018",
+      "es2017",
       "dom"
     ],
   },
+  "include": ["src"],
   "exclude": [
     "node_modules"
   ]
