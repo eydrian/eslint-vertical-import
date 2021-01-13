@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-eslint-vertical-import",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Custom eslint rule to enforces vertical alignment of imports",
   "main": "dist/index.js",
   "scripts": {
