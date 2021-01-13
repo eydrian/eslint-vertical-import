@@ -34,7 +34,7 @@ This is a custom [eslint](https://eslint.org) rule that enforces vertical alignm
 
 Install the package with
 
-`npm install eslint-vertical-import --save-dev` (or `yarn add eslint-vertical-import --save-dev`).
+`npm install npm i eslint-plugin-eslint-vertical-import --save-dev` (or `yarn add npm i eslint-plugin-eslint-vertical-import --save-dev`).
 
 Then add the following to your `.eslintrc.js`:
 
