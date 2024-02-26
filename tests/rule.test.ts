@@ -1,9 +1,8 @@
 import {
-  TSESLint,
-} from '@typescript-eslint/experimental-utils';
-import {
-  resolve,
-} from 'path';
+  RuleTester,
+} from 'eslint';
+const parser = require.resolve('@typescript-eslint/parser')
+
 
 import rule from '../src/verticalImportRule'
 import {
@@ -11,17 +10,17 @@ import {
   RULE_NAME,
 } from '../src/verticalImportRule';
 
-const ruleTester = new TSESLint.RuleTester({
-  parser: resolve('./node_modules/@typescript-eslint/parser'),
+const ruleTester = new RuleTester({
+  parser,
   parserOptions: {
-    ecmaVersion: 2018,
+    ecmaVersion: 2021,
     sourceType: 'module',
   },
 });
 
 const messageId: MessageIds = 'verticalImport';
 
-ruleTester.run(RULE_NAME, rule, {
+ruleTester.run(RULE_NAME, rule as any, {
   valid: [
     // should succeed when imports are properly aligned
     `
@@ -98,5 +97,5 @@ import {
         verticalImport: 'Imports must be vertically aligned',
       },
     }],
-  }],
+  }]
 })

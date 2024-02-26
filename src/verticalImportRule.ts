@@ -2,7 +2,7 @@ import {
   TSESTree,
   ESLintUtils,
   TSESLint,
-} from '@typescript-eslint/experimental-utils';
+} from '@typescript-eslint/utils';
 
 const version = require('../package.json').version;
 const createRule = ESLintUtils.RuleCreator(
@@ -82,12 +82,11 @@ export default createRule<Options, MessageIds>({
   meta: {
     type: 'layout',
     docs: {
-      category: 'Best Practices',
       description:
         `Enforces imports to be vertically aligned.
         To facilitate merge request and reordering of imports, e.g. alphabetically, the imports must be aligned vertically
         `,
-      recommended: 'error',
+      recommended: undefined,
     },
     schema: [],
     fixable: 'code',
